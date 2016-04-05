@@ -3,5 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/city_title_background_height"
+        android:background="@color/city_title_background"
+        android:text="@string/title_name"
+        android:gravity="center"
+        android:textSize="@dimen/city_title_font_size"
+        android:textColor="@color/city_title_text"
+        />
+    
 
 </LinearLayout>
