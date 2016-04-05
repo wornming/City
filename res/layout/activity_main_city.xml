@@ -1,9 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
     <TextView 
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="@dimen/city_title_background_height"
         android:background="@color/city_title_background"
@@ -12,6 +13,11 @@
         android:textSize="@dimen/city_title_font_size"
         android:textColor="@color/city_title_text"
         />
-    
+    <include
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+    	android:layout_height="@dimen/city_bottomnav_height"
+    	layout="@layout/city_bottomnav"
+        />
 
-</LinearLayout>
+</RelativeLayout>

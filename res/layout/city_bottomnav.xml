@@ -3,12 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/city_bottomnav_height"
     android:orientation="horizontal" >
-
+	
     <LinearLayout
         android:id="@+id/city_bottomnav_city_btn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/city_bottomnav_margin_rl"
         android:layout_weight="1"
         android:orientation="vertical" >
 
@@ -26,15 +25,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/city_city"
+            android:textColor="@color/city_bottomnav_text_sel"
             android:textSize="@dimen/city_bottomnav_font_size" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/city_bottomnav_find_btn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/city_bottomnav_margin_rl"
-        android:layout_marginTop="@dimen/city_bottomnav_margin_top"
         android:layout_weight="1"
         android:orientation="vertical" >
 
@@ -43,23 +41,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/city_sel" />
+            android:layout_marginTop="@dimen/city_bottomnav_margin_top"
+            android:src="@drawable/find"
+             />
 
         <TextView
             android:id="@+id/city_bottomnav_find_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/city_find"
             android:layout_gravity="center_horizontal"
-            android:text="@string/city_city"
-            android:textSize="@dimen/city_bottomnav_font_size" />
+            android:textSize="@dimen/city_bottomnav_font_size"
+            android:textColor="@color/city_bottomnav_text" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/city_bottomnav_serve_btn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/city_bottomnav_margin_rl"
-        android:layout_marginTop="@dimen/city_bottomnav_margin_top"
         android:layout_weight="1"
         android:orientation="vertical" >
 
@@ -67,24 +66,24 @@
             android:id="@+id/city_bottomnav_serve_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/city_bottomnav_margin_top"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/city_sel" />
+            android:src="@drawable/servece" />
 
         <TextView
             android:id="@+id/city_bottomnav_serve_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/city_service"
             android:layout_gravity="center_horizontal"
-            android:text="@string/city_city"
-            android:textSize="@dimen/city_bottomnav_font_size" />
+            android:textSize="@dimen/city_bottomnav_font_size"
+            android:textColor="@color/city_bottomnav_text" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/city_bottomnav_me_btn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/city_bottomnav_margin_rl"
-        android:layout_marginTop="@dimen/city_bottomnav_margin_top"
         android:layout_weight="1"
         android:orientation="vertical" >
 
@@ -92,16 +91,18 @@
             android:id="@+id/city_bottomnav_me_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/city_bottomnav_margin_top"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/city_sel" />
+            android:src="@drawable/me" />
 
         <TextView
             android:id="@+id/city_bottomnav_me_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/city_city"
-            android:textSize="@dimen/city_bottomnav_font_size" />
+            android:text="@string/city_mine"
+            android:textSize="@dimen/city_bottomnav_font_size" 
+            android:textColor="@color/city_bottomnav_text"/>
     </LinearLayout>
 
 </LinearLayout>
