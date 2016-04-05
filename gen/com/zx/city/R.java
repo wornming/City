@@ -15,6 +15,8 @@ public final class R {
         public static final int city_bottomnav_text_sel=0x7f040002;
         public static final int city_title_background=0x7f040000;
         public static final int city_title_text=0x7f040001;
+        public static final int city_topnav_text=0x7f040005;
+        public static final int city_topnav_text_sel=0x7f040004;
     }
     public static final class dimen {
         /** 
@@ -23,7 +25,7 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050006;
+        public static final int activity_horizontal_margin=0x7f050009;
         public static final int city_bottomnav_font_size=0x7f050005;
         public static final int city_bottomnav_height=0x7f050002;
         public static final int city_bottomnav_margin_rl=0x7f050003;
@@ -32,6 +34,9 @@ public final class R {
          */
         public static final int city_title_background_height=0x7f050000;
         public static final int city_title_font_size=0x7f050001;
+        public static final int city_topnav_bottomnavtitle=0x7f050007;
+        public static final int city_topnav_font_size=0x7f050006;
+        public static final int city_topnav_height=0x7f050008;
     }
     public static final class drawable {
         public static final int city=0x7f020000;
@@ -72,8 +77,11 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int city_city=0x7f060004;
         public static final int city_find=0x7f060005;
+        public static final int city_hot=0x7f060009;
+        public static final int city_local=0x7f060008;
         public static final int city_mine=0x7f060007;
         public static final int city_service=0x7f060006;
+        public static final int city_tui=0x7f06000a;
         public static final int hello_world=0x7f060001;
         public static final int title_name=0x7f060003;
     }

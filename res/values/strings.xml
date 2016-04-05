@@ -9,5 +9,7 @@
     <string name="city_find">发现</string>
     <string name="city_service">服务</string>
     <string name="city_mine">我的</string>
-
+	<string name="city_local">本地</string>
+	<string name="city_hot">热门</string>
+	<string name="city_tui">推荐</string>
 </resources>

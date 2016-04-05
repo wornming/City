@@ -51,10 +51,6 @@ public class MainCity extends Activity implements OnClickListener {
 		cityBottomNavMine.setOnClickListener(this);
 		cityBottomNavServece.setOnClickListener(this);
 		
-		FragmentManager fm = getFragmentManager();
-		FragmentTransaction transaction = fm.beginTransaction();
-		transaction.add(R.id.city_main_content, new ContentFragment());
-		transaction.commit();
 	}
 
 	/**

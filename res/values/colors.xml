@@ -4,4 +4,6 @@
     <color name="city_title_text">#fff</color>
     <color name="city_bottomnav_text_sel">#39AFFF</color>
     <color name="city_bottomnav_text">#999999</color>
+    <color name="city_topnav_text_sel">#39AFFF</color>
+    <color name="city_topnav_text">#666666</color>
 </resources>
