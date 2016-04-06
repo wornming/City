@@ -25,7 +25,7 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050009;
+        public static final int activity_horizontal_margin=0x7f05000b;
         public static final int city_bottomnav_font_size=0x7f050005;
         public static final int city_bottomnav_height=0x7f050002;
         public static final int city_bottomnav_margin_rl=0x7f050003;
@@ -37,6 +37,8 @@ public final class R {
         public static final int city_topnav_bottomnavtitle=0x7f050007;
         public static final int city_topnav_font_size=0x7f050006;
         public static final int city_topnav_height=0x7f050008;
+        public static final int city_topnav_nav_width=0x7f05000a;
+        public static final int city_topnav_text_padding=0x7f050009;
     }
     public static final class drawable {
         public static final int city=0x7f020000;
@@ -50,19 +52,29 @@ public final class R {
         public static final int service_sel=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000c;
-        public static final int city_bottomnav_city_btn=0x7f090000;
-        public static final int city_bottomnav_city_img=0x7f090001;
-        public static final int city_bottomnav_city_text=0x7f090002;
-        public static final int city_bottomnav_find_btn=0x7f090003;
-        public static final int city_bottomnav_find_img=0x7f090004;
-        public static final int city_bottomnav_find_text=0x7f090005;
-        public static final int city_bottomnav_me_btn=0x7f090009;
-        public static final int city_bottomnav_me_img=0x7f09000a;
-        public static final int city_bottomnav_me_text=0x7f09000b;
-        public static final int city_bottomnav_serve_btn=0x7f090006;
-        public static final int city_bottomnav_serve_img=0x7f090007;
-        public static final int city_bottomnav_serve_text=0x7f090008;
+        public static final int action_settings=0x7f090016;
+        public static final int city_bottomnav_city_btn=0x7f090001;
+        public static final int city_bottomnav_city_img=0x7f090002;
+        public static final int city_bottomnav_city_text=0x7f090003;
+        public static final int city_bottomnav_find_btn=0x7f090004;
+        public static final int city_bottomnav_find_img=0x7f090005;
+        public static final int city_bottomnav_find_text=0x7f090006;
+        public static final int city_bottomnav_me_btn=0x7f09000a;
+        public static final int city_bottomnav_me_img=0x7f09000b;
+        public static final int city_bottomnav_me_text=0x7f09000c;
+        public static final int city_bottomnav_serve_btn=0x7f090007;
+        public static final int city_bottomnav_serve_img=0x7f090008;
+        public static final int city_bottomnav_serve_text=0x7f090009;
+        public static final int city_topnav_hot_btn=0x7f090010;
+        public static final int city_topnav_hot_img=0x7f090012;
+        public static final int city_topnav_hot_text=0x7f090011;
+        public static final int city_topnav_local_btn=0x7f09000d;
+        public static final int city_topnav_local_img=0x7f09000f;
+        public static final int city_topnav_local_text=0x7f09000e;
+        public static final int city_topnav_tui_btn=0x7f090013;
+        public static final int city_topnav_tui_img=0x7f090015;
+        public static final int city_topnav_tui_text=0x7f090014;
+        public static final int city_toptitle=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main_city=0x7f030000;

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     <TextView 
+        android:id="@+id/city_toptitle"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="@dimen/city_title_background_height"
@@ -13,6 +14,13 @@
         android:textSize="@dimen/city_title_font_size"
         android:textColor="@color/city_title_text"
         />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/city_topnav_height"
+        android:layout_below="@+id/city_toptitle"
+        layout="@layout/city_topnav" />
+
     <include
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"

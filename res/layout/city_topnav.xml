@@ -1,74 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/city_topnav_height"
     android:orientation="horizontal" >
 
     <LinearLayout
+        android:id="@+id/city_topnav_local_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/city_topnav_height"
         android:layout_weight="1"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/city_topnav_local_text"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
             android:gravity="center_vertical"
+            android:paddingLeft="@dimen/city_topnav_text_padding"
+            android:paddingRight="@dimen/city_topnav_text_padding"
             android:text="@string/city_local"
             android:textColor="@color/city_bottomnav_text_sel"
             android:textSize="@dimen/city_topnav_font_size" />
 
         <View
-            android:layout_width="match_parent"
+            android:id="@+id/city_topnav_local_img"
+            android:layout_width="@dimen/city_topnav_nav_width"
             android:layout_height="@dimen/city_topnav_bottomnavtitle"
-            android:background="@color/city_topnav_text_sel" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/city_topnav_text_sel"
+             />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/city_topnav_hot_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/city_topnav_height"
         android:layout_weight="1"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/city_topnav_hot_text"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
             android:gravity="center_vertical"
-            android:text="@string/city_local"
-            android:textColor="@color/city_bottomnav_text_sel"
+            android:paddingLeft="@dimen/city_topnav_text_padding"
+            android:paddingRight="@dimen/city_topnav_text_padding"
+            android:text="@string/city_hot"
+            android:textColor="@color/city_bottomnav_text"
             android:textSize="@dimen/city_topnav_font_size" />
 
         <View
-            android:layout_width="match_parent"
+            android:id="@+id/city_topnav_hot_img"
+            android:layout_width="@dimen/city_topnav_nav_width"
             android:layout_height="@dimen/city_topnav_bottomnavtitle"
-            android:background="@color/city_topnav_text_sel" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/city_topnav_text_sel"
+            android:visibility="invisible"
+             />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/city_topnav_tui_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/city_topnav_height"
         android:layout_weight="1"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/city_topnav_tui_text"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
             android:gravity="center_vertical"
-            android:text="@string/city_local"
-            android:textColor="@color/city_bottomnav_text_sel"
+            android:paddingLeft="@dimen/city_topnav_text_padding"
+            android:paddingRight="@dimen/city_topnav_text_padding"
+            android:text="@string/city_tui"
+            android:textColor="@color/city_bottomnav_text"
             android:textSize="@dimen/city_topnav_font_size" />
 
         <View
-            android:layout_width="match_parent"
+            android:id="@+id/city_topnav_tui_img"
+            android:layout_width="@dimen/city_topnav_nav_width"
             android:layout_height="@dimen/city_topnav_bottomnavtitle"
-            android:background="@color/city_topnav_text_sel" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/city_topnav_text_sel"
+            android:visibility="invisible"
+             />
     </LinearLayout>
 
 </LinearLayout>

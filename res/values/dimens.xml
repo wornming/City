@@ -10,5 +10,7 @@
     <dimen name="city_topnav_font_size">14sp</dimen>
     <dimen name="city_topnav_bottomnavtitle">3dp</dimen>
     <dimen name="city_topnav_height">40dp</dimen>
+    <dimen name="city_topnav_text_padding">12dp</dimen>
+    <dimen name="city_topnav_nav_width">50dp</dimen>
 
 </resources>
