@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainCity extends Activity implements OnClickListener {
@@ -34,6 +36,10 @@ public class MainCity extends Activity implements OnClickListener {
 	private TextView cityTopNavLocalText;
 	private TextView cityTopNavHotText;
 	private TextView cityTopNavTuiText;
+	
+	//关于ListView
+	private ListView mContentListView;
+	private CityContentAdapter mAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +57,11 @@ public class MainCity extends Activity implements OnClickListener {
 		cityTopNavLocal.setOnClickListener(this);
 		cityTopNavHot.setOnClickListener(this);
 		cityTopNavTui.setOnClickListener(this);
-
+		
+		//对Listview进行处理
+		mContentListView = (ListView) findViewById(R.id.city_content_list);
+		mAdapter = new CityContentAdapter(this);
+		mContentListView.setAdapter(mAdapter);
 	}
 
 	/**

@@ -3,29 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView 
+
+    <TextView
         android:id="@+id/city_toptitle"
-        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="@dimen/city_title_background_height"
+        android:layout_alignParentTop="true"
         android:background="@color/city_title_background"
-        android:text="@string/title_name"
         android:gravity="center"
-        android:textSize="@dimen/city_title_font_size"
+        android:text="@string/title_name"
         android:textColor="@color/city_title_text"
-        />
+        android:textSize="@dimen/city_title_font_size" />
 
     <include
+        android:id="@+id/city_topnav"
         android:layout_width="match_parent"
         android:layout_height="@dimen/city_topnav_height"
-        android:layout_below="@+id/city_toptitle"
+        android:layout_below="@id/city_toptitle"
         layout="@layout/city_topnav" />
 
-    <include
-        android:layout_alignParentBottom="true"
+    <ListView
+        android:id="@+id/city_content_list"
         android:layout_width="match_parent"
-    	android:layout_height="@dimen/city_bottomnav_height"
-    	layout="@layout/city_bottomnav"
-        />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/city_bottomnav"
+        android:layout_below="@id/city_topnav" />
+
+    <include
+        android:id="@+id/city_bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/city_bottomnav_height"
+        android:layout_alignParentBottom="true"
+        layout="@layout/city_bottomnav" />
 
 </RelativeLayout>
