@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="12dp"
+       	android:textSize="18dp"
+       	android:text="未来就业生就业地域将更集中在中小城市"
+        />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_alignParentLeft="true"
+            android:text="东方圣城网"
+            android:textSize="14sp"
+            android:textColor="#AAAAAA"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="11dp"
+            android:layout_alignParentRight="true"
+            android:text="1 小时前"
+            android:textSize="14sp"
+            android:textColor="#AAAAAA"
+            />
+    </RelativeLayout>
+</LinearLayout>

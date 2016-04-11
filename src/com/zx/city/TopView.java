@@ -2,7 +2,12 @@ package com.zx.city;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import android.content.Context;
+import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -29,13 +34,35 @@ public class TopView {
 	private int currentItem = 0;
 	private ViewPager viewPager;
 	private MPagerAdapter mPagerAdapter;
+	// 定义定时器任务
+	private ScheduledExecutorService scheduledExecutorService;
+
+	// 切换当前显示的图片
+	private Handler handler = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+			viewPager.setCurrentItem(currentItem);// 切换当前显示的图片
+		};
+	};
 
 	public TopView(Context context) {
 		mContext = context;
+		mPagerAdapter = new MPagerAdapter();
+		scheduledExecutorService = Executors.newScheduledThreadPool(1);
+		// 执行定时器任务
+		scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
+
+			public void run() {
+				synchronized (viewPager) {
+					System.out.println("currentItem: " + currentItem);
+					currentItem = (currentItem + 1) % imageViews.size();
+					handler.obtainMessage().sendToTarget();
+				}
+			}
+		}, 1, 2, TimeUnit.SECONDS);
 	}
 
 	// 得到第一个布局
-	private View getTopView() {
+	public View getTopView() {
 		mTopView = LayoutInflater.from(mContext).inflate(R.layout.city_contentlist_viewpager, null);
 		imageResId = new int[] { R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d };
 
