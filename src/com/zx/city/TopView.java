@@ -2,115 +2,36 @@ package com.zx.city;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
 import android.content.Context;
-import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageView.ScaleType;
 
-public class CityContentAdapter extends BaseAdapter {
-
-	public Context mContext;
-	private MPagerAdapter mPagerAdapter;
+public class TopView {
+	private Context mContext;
 	private View mTopView;
-	// 定义定时器任务
-	private ScheduledExecutorService scheduledExecutorService;
-	private ViewPager viewPager;
-	// 用于存放滚动的图片
-	private List<ImageView> imageViews;
 	// 用于存放图片的ID
 	private int[] imageResId;
-	// 设置当前图片索引
-	private int currentItem = 0;
+	// 图片标题
+	private String[] titles;
+	// 用于存放滚动的图片
+	private List<ImageView> imageViews;
 	// 图片标题正文的那些点
 	private List<View> dots;
 	// viewpager下面的标题
 	private TextView adtitle;
-	// 图片标题
-	private String[] titles;
+	// 设置当前图片索引
+	private int currentItem = 0;
+	private ViewPager viewPager;
+	private MPagerAdapter mPagerAdapter;
 
-	// 切换当前显示的图片
-	private Handler handler = new Handler() {
-		public void handleMessage(android.os.Message msg) {
-			viewPager.setCurrentItem(currentItem);// 切换当前显示的图片
-		};
-	};
-
-	public CityContentAdapter(Context context) {
+	public TopView(Context context) {
 		mContext = context;
-		mPagerAdapter = new MPagerAdapter();
-		scheduledExecutorService = Executors.newScheduledThreadPool(1);
-		// 执行定时器任务
-		scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
-
-			public void run() {
-				synchronized (viewPager) {
-					System.out.println("currentItem: " + currentItem);
-					currentItem = (currentItem + 1) % imageViews.size();
-					handler.obtainMessage().sendToTarget();
-				}
-			}
-		}, 1, 2, TimeUnit.SECONDS);
-	}
-
-	@Override
-	public int getCount() {
-		// 用于测试只显示5行数据
-		return 30;
-	}
-
-	@Override
-	public Object getItem(int position) {
-		return null;
-	}
-
-	@Override
-	public long getItemId(int position) {
-		return 0;
-	}
-
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		if (position == 0) {
-			return getTopView();
-		}
-		return getSecondView();
-	}
-
-	// ListView中实现PageAdapter
-	public class MPagerAdapter extends PagerAdapter {
-		@Override
-		public int getCount() {
-			return imageResId.length;
-		}
-
-		@Override
-		public Object instantiateItem(View arg0, int arg1) {
-			((ViewPager) arg0).addView(imageViews.get(arg1));
-			return imageViews.get(arg1);
-		}
-
-		@Override
-		public void destroyItem(View arg0, int arg1, Object arg2) {
-			((ViewPager) arg0).removeView((View) arg2);
-		}
-
-		@Override
-		public boolean isViewFromObject(View arg0, Object arg1) {
-			return arg0 == arg1;
-		}
-
 	}
 
 	// 得到第一个布局
@@ -148,6 +69,31 @@ public class CityContentAdapter extends BaseAdapter {
 		return mTopView;
 	}
 
+	// ListView中实现PageAdapter
+	public class MPagerAdapter extends PagerAdapter {
+		@Override
+		public int getCount() {
+			return imageResId.length;
+		}
+
+		@Override
+		public Object instantiateItem(View arg0, int arg1) {
+			((ViewPager) arg0).addView(imageViews.get(arg1));
+			return imageViews.get(arg1);
+		}
+
+		@Override
+		public void destroyItem(View arg0, int arg1, Object arg2) {
+			((ViewPager) arg0).removeView((View) arg2);
+		}
+
+		@Override
+		public boolean isViewFromObject(View arg0, Object arg1) {
+			return arg0 == arg1;
+		}
+
+	}
+
 	private class MyPageChangeListener implements OnPageChangeListener {
 		int oldPosition = 0;
 
@@ -168,10 +114,4 @@ public class CityContentAdapter extends BaseAdapter {
 		public void onPageScrollStateChanged(int arg0) {
 		}
 	}
-
-	// 得到第二个布局view
-	private View getSecondView() {
-		return LayoutInflater.from(mContext).inflate(R.layout.list_item, null);
-	}
-
 }

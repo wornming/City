@@ -59,7 +59,7 @@ public final class R {
         public static final int service_sel=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090021;
+        public static final int action_settings=0x7f090020;
         public static final int city_bottomnav=0x7f090003;
         public static final int city_bottomnav_city_btn=0x7f090004;
         public static final int city_bottomnav_city_img=0x7f090005;
@@ -76,22 +76,21 @@ public final class R {
         public static final int city_content_list=0x7f090002;
         public static final int city_content_newstitle=0x7f090011;
         public static final int city_topnav=0x7f090001;
-        public static final int city_topnav_hot_btn=0x7f09001a;
-        public static final int city_topnav_hot_img=0x7f09001c;
-        public static final int city_topnav_hot_text=0x7f09001b;
-        public static final int city_topnav_local_btn=0x7f090017;
-        public static final int city_topnav_local_img=0x7f090019;
-        public static final int city_topnav_local_text=0x7f090018;
-        public static final int city_topnav_tui_btn=0x7f09001d;
-        public static final int city_topnav_tui_img=0x7f09001f;
-        public static final int city_topnav_tui_text=0x7f09001e;
+        public static final int city_topnav_hot_btn=0x7f090019;
+        public static final int city_topnav_hot_img=0x7f09001b;
+        public static final int city_topnav_hot_text=0x7f09001a;
+        public static final int city_topnav_local_btn=0x7f090016;
+        public static final int city_topnav_local_img=0x7f090018;
+        public static final int city_topnav_local_text=0x7f090017;
+        public static final int city_topnav_tui_btn=0x7f09001c;
+        public static final int city_topnav_tui_img=0x7f09001e;
+        public static final int city_topnav_tui_text=0x7f09001d;
         public static final int city_toptitle=0x7f090000;
-        public static final int list_item=0x7f090020;
+        public static final int list_item=0x7f09001f;
         public static final int v_dot0=0x7f090012;
         public static final int v_dot1=0x7f090013;
         public static final int v_dot2=0x7f090014;
         public static final int v_dot3=0x7f090015;
-        public static final int v_dot4=0x7f090016;
         public static final int view_pager=0x7f090010;
     }
     public static final class layout {
